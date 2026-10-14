@@ -1,0 +1,11 @@
+#!/bin/bash
+
+STATE=$( cat /usr/local/share/charge-limit )
+if [ $STATE -eq 80 ]; then
+	echo 100 > /usr/local/share/charge-limit
+	echo Limit set to: 100%
+else
+	echo 80 > /usr/local/share/charge-limit
+	echo Limit set to: 80%
+fi
+sudo systemctl start charge-limit.service

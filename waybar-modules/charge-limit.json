@@ -1,0 +1,9 @@
+{
+	"custom/charge-limit": {
+		"exec": "cat /usr/local/share/charge-limit",
+		"on-click": "/usr/local/bin/charge-limit-toggle",
+		"interval": 5,
+		"exec-on-event": true,
+		"format": "LIM: {text}%"
+	}
+}
